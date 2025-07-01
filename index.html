@@ -15,7 +15,7 @@
 <body>
 <div id="header">
   <div class="container">
-    <nav class="header-static">
+    <!-- <nav class="header-static">
       <img src="images/KEVIN LOGO.png" class="logo">
       <ul>
         <li><a href="#">Home</a></li>
@@ -26,9 +26,9 @@
         <i class="fa-regular fa-circle-xmark"></i>
       </ul>
       <i class="fa-solid fa-bars"></i>
-    </nav>
+    </nav> -->
     <div class="header-text">
-      <p>Virtual Assistant | Interior Designer | Visualization/Graphic Artist</p>
+      <p>Virtual Assistant | Video Editor | Graphic Artist</p>
       <h1>Hi there! I am <span>Kevin</span> de Vera<br>from the Philippines</h1>
     </div>
   </div>
@@ -39,53 +39,49 @@
 <div id="about">
   <div class="container">
     <div class="row">
-      <div class="about-col-1">
-        <img class="photo" src="images/kevtoon.png">
-      </div>
-
-      <div class="about-col-2">
-        <h2 class="sub-title">About Me</h1>
-        <p>Kevin is a highly organized and analytical professional with five years of managerial experience, as well as extensive experience in graphic arts, 
-          interior design, and CG artistry. With over 9 years of combined experience in these fields, he has honed his skills in project management, team leadership, 
-          calendar management, and HR tasks.  He is a reliable team player who takes initiative to maintain high-quality work and communicates effectively. 
-          He is dedicated to ongoing learning and professional development to continuously deliver outstanding results.
+      
+<div class="about-section">
+  <h1 class="sub-title">About Me</h1>
+        <p>Kevin is a creative and organized professional with 5 years of management experience and over 9 years in graphic arts, interior design, CG art, and short-form video editing with simple motion. He’s skilled in leading teams, managing projects, and keeping things on track. A reliable team player who communicates well and always looks for ways to learn and improve.
         </p>
 
-        <div class="tab-titles">
-          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-          <p class="tab-links" onclick="opentab('experience')">Experiences</p>
-          <p class="tab-links" onclick="opentab('education')">Education</p>
-        </div>
-        
-        <div class="tab-contents active-tab" id="skills">
-          <ul>
-            <li><span>Visualization</span><br>Interior/Exterior Design</li>
-            <li><span>3D Modelling</span><br>Architectural Concepts</li>
-            <li><span>Graphic Design</span><br>Marketing Materials/logo</li>
-            <li><span>Social Media Manager</span><br>Creating contents and campaign materials </li>   
-            <li><span>Basic Web Development</span><br>HTML, CSS and JS </li>   
-          </ul>
-       </div>
+        <div class="tab-wrapper">
+  <div class="tab-titles">
+    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+    <p class="tab-links" onclick="opentab('experience')">Experiences</p>
+    <p class="tab-links" onclick="opentab('education')">Education</p>
+  </div>
 
-      <div class="tab-contents" id="experience">
-        <ul>
-          <li><span>2014-2015</span><br>Junior Designer</li>
-          <li><span>2015-2017</span><br>Senior Designer/Supervisor</li>
-          <li><span>2017-2023</span><br>Manager of Technology</li>
-          <li><span>2017-2018</span><br>ESL Tutor</li>   
-        </ul>
-     </div>
+  <div class="tab-contents active-tab" id="skills">
+    <ul>
+      <li><span>Social Media Marketing/Management</span><br>Content Creation/campaigns Using Hootsuite</li>  
+      <li><span>Video Editing</span><br>Infographics/Motion</li>
+      <li><span>Email Marketing</span><br>Constant Contact</li>
+      <li><span>Basic Web Development</span><br>HTML, CSS and JS, Wild Apricot, Wordpress and Squarespace</li>  
+      <li><span>3D Modelling</span><br>Architectural Concepts</li>
+      <li><span>Graphic Design</span><br>Marketing Materials/logo</li>
+    </ul>
+  </div>
 
-    <div class="tab-contents" id="education">
-      <ul>
-        <li><span>2011-2014</span><br>Bachelor Of Science in Business Administration Major in Entrepreneurship</li>
-        <li><span>2014-2015</span><br>Technical Drafting at Tesda Korphil Guiguinto Bulacan</li>
-      
-      </ul>
-    </div>
-      </div>
+  <div class="tab-contents" id="experience">
+    <ul>
+      <li><span>2023-</span><br>Business Virtual Assistant</li>   
+      <li><span>2023-</span><br>Short form Video Editor</li> 
+      <li><span>2017-2023</span><br>Manager of Technology/Marketing Lead</li>  
+      <li><span>2015-2017</span><br>Senior Designer/Supervisor</li>
+      <li><span>2014-2015</span><br>Junior Designer</li>
+      <li><span>2017-2018</span><br>ESL Tutor</li>   
+    </ul>
+  </div>
 
-    
+  <div class="tab-contents" id="education">
+    <ul>
+      <li><span>2011-2014</span><br>Bachelor Of Science in Business Administration Major in Entrepreneurship</li>
+      <li><span>2014-2015</span><br>Technical Drafting at Tesda Korphil Guiguinto Bulacan</li>
+    </ul>
+  </div>
+</div>
+
 
       
     </div>
@@ -94,15 +90,14 @@
 
 <!-- --------services--------- -->
 
-<div id="services">
+<!-- <div id="services">
   <div class="container">
     <h1 class="sub-title">My Services</h1>
     <div class="services-list">
       <div>
         <i class="fa-solid fa-cube"></i>
-        <h2>3D Visualization</h2>
-        <p>I can create stunning 3D visualizations that will elevate your project to the next level.I guarantee accurate and detailed outputs, 
-          giving your clients or customers an immersive experience that will leave a lasting impression.</p>
+        <h2>Video Editing</h2>
+        <p>I am an experienced video editor mostly focused on creating reels, shorts, and any other shortform contents</p>
         <a href="#">Learn more</a>
       </div>
       <div>
@@ -113,35 +108,118 @@
       </div>
       <div>
         <i class="fa-solid fa-table"></i>
-        <h2>SEO Optimization</h2>
-        <p>As an SEO specialist, my work is focused on helping businesses improve their online visibility and attract more traffic to their website through search engine optimization (SEO). </p>
+        <h2>Digital Marketing Specialist</h2>
+        <p>A digital marketing job involves promoting products, services, or brands through online channels. Responsibilities include developing and implementing marketing strategies, managing digital advertising campaigns, analyzing data and metrics, optimizing online presence, and engaging with target audiences. </p>
         <a href="#">Learn more</a>
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- ----------my works---------- -->
 <div id="portfolio">
   <div class="container">
     <h1 class="sub-title">My Works</h1>
-    <h2 class="work-v">Visualization Works | Virtual Assistant Works</h2>
+    <h2 class="work-v">Video Editing | Podcasts/Motivational</h2>
+    
     <div class="work-list">
-      <div class="work">
-        <img src="images/Work-1.jpg">
-      </div>
-      <div class="work">
-        <img src="images/Work-2.jpg">
-      </div>
-      <div class="work">
-        <img src="images/Work-3.jpg">
-      </div>
-    </div>
+      <!-- Row 1 -->
+<!-- Row 1 -->
+<div class="work">
+  <video class="work-video" autoplay muted playsinline loop controls>
+    <source src="images/Timelines.mp4" type="video/mp4">
+  </video>
+</div>
+<div class="work">
+  <video class="work-video" autoplay muted playsinline loop controls>
+    <source src="images/twelve.mp4" type="video/mp4">
+  </video>
+</div>
+<div class="work">
+  <video class="work-video" autoplay muted playsinline loop controls>
+    <source src="images/Sex Sells.mp4" type="video/mp4">
+  </video>
+</div>
+<div class="work">
+  <video class="work-video" autoplay muted playsinline loop controls>
+    <source src="images/MM Maria - Materialize PC.mp4" type="video/mp4">
+  </video>
+</div>
+
+<!-- Row 2 -->
+<div class="work">
+  <video class="work-video" autoplay muted playsinline loop controls>
+    <source src="images/BELIEVE.mp4" type="video/mp4">
+  </video>
+</div>
+<div class="work">
+  <video class="work-video" autoplay muted playsinline loop controls>
+    <source src="images/Leave.mp4" type="video/mp4">
+  </video>
+</div>
+<div class="work">
+  <video class="work-video" autoplay muted playsinline loop controls>
+    <source src="images/Fullfill.mp4" type="video/mp4">
+  </video>
+</div>
+<div class="work">
+  <video class="work-video" autoplay muted playsinline loop controls>
+    <source src="images/It's about how hard you can get hit.mp4" type="video/mp4">
+  </video>
+</div>
+
+<!-- Row 3 -->
+<div class="work">
+  <video class="work-video" autoplay muted playsinline loop controls>
+    <source src="images/Casper.mp4" type="video/mp4">
+  </video>
+</div>
+<div class="work">
+  <video class="work-video" autoplay muted playsinline loop controls>
+    <source src="images/AdElle.mp4" type="video/mp4">
+  </video>
+</div>
+<div class="work">
+  <video class="work-video" autoplay muted playsinline loop controls>
+    <source src="images/Innerlink.mp4" type="video/mp4">
+  </video>
+</div>
+<div class="work">
+  <video class="work-video" autoplay muted playsinline loop controls>
+    <source src="images/BBAi.mp4" type="video/mp4">
+  </video>
+</div>
+
+<!-- Row 3 -->
+<div class="work">
+  <video class="work-video" autoplay muted playsinline loop controls>
+    <source src="images/Fempowerment2.mp4" type="video/mp4">
+  </video>
+</div>
+<div class="work">
+  <video class="work-video" autoplay muted playsinline loop controls>
+    <source src="images/Best Coffee.mp4" type="video/mp4">
+  </video>
+</div>
+<div class="work">
+  <video class="work-video" autoplay muted playsinline loop controls>
+    <source src="images/Things to do.mp4" type="video/mp4">
+  </video>
+</div>
+<div class="work">
+  <video class="work-video" autoplay muted playsinline loop controls>
+    <source src="images/Reel tsoa2.mp4" type="video/mp4">
+  </video>
+</div>
+
+    
+  </div>
+</div>
     
     
   </div>
 
-  <div class="container-two hidden">
+  <!-- <div class="container-two hidden">
     <div class="hide-me">
       <div class="work">
         <img src="images/Work-4.jpg">
@@ -160,11 +238,11 @@
       </div>
       <div class="work">
         <img src="images/Work-9.jpg">
-      </div>
+      </div> -->
 
     
 
-      <div class="work">
+      <!-- <div class="work">
         <img src="images/SMM.jpg">
       </div>
       <div class="work">
@@ -176,11 +254,24 @@
       <div class="work">
         <img src="images/SMM4.jpg">
       </div>
+      <div class="work">
+        <img src="images/SMM5.png">
+      </div>
+      <div class="work">
+        <img src="images/SMM6.png">
+      </div>
+      <div class="work">
+        <img src="images/SMM7.png">
+      </div>
+      <div class="work">
+        <img src="images/SMM4.jpg">
+      </div> -->
+
     </div>
     
 
-  </div>
-  <li href="#" onclick="showHideUsers(); changeButtonText();"  class="button" >See more</li>
+  <!-- </div>
+  <li href="#" onclick="showHideUsers(); changeButtonText();"  class="button" >See more</li> -->
   
   
 </div>
@@ -193,12 +284,13 @@
     <div class="row">
       <div class="contact-left">
         <h1 class="sub-title">Contact Me</h1>
-        <p><i class="fa-solid fa-paper-plane"></i>kevin.devera.pineapplebva45@gmail.com</p>
+        <p><i class="fa-solid fa-paper-plane"></i>kevindevera.ea@gmail.com</p>
+        <p><i class="fa-solid fa-paper-plane"></i>deverakevins@gmail.com</p>
         <p><i class="fa-solid fa-phone"></i>09694169781</p>
         <div class="social-icons">
             <a href="https://www.facebook.com/Goldified/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
             <a href="https://twitter.com/KevinDvera" target="_blank"><i class="fa-brands fa-twitter"></i>
-            <a href="https://www.instagram.com/kevinmdevera/" target="_blank"><i class="fa-brands fa-instagram"></i></i>
+            <a href="https://www.instagram.com/kevindevera.ea/" target="_blank"><i class="fa-brands fa-instagram"></i></i>
             <a href="https://www.linkedin.com/in/kevin-de-vera-432762248/" target="_blank"><i class="fa-brands fa-linkedin-in"></i>
         </div>
         <a href="images/MY CV.pdf" download class="btn btn2">Download CV</a>
