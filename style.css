@@ -611,6 +611,99 @@ body {
   line-height: 1.6;
 }
 
+/* Base styles (already applied) */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Make video grid responsive */
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.work {
+  flex: 1 1 calc(50% - 20px);
+  max-width: calc(50% - 20px);
+}
+
+.work video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsive mobile styles */
+@media screen and (max-width: 768px) {
+  .work {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .about-col-2 {
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .sub-title {
+    font-size: 28px;
+  }
+
+  .tab-titles {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .tab-contents ul {
+    padding-left: 0;
+    text-align: left;
+  }
+
+  .tab-contents ul li {
+    margin-bottom: 10px;
+  }
+
+  .header-text h1 {
+    font-size: 24px;
+  }
+
+  .header-text p {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .contact-left, .contact-right {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+    margin: 0 10px;
+  }
+
+  form input, form textarea {
+    width: 90%;
+    margin: 10px auto;
+    display: block;
+  }
+
+  .btn.btn2 {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+  }
+}
 
 
 
