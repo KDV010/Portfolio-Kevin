@@ -768,3 +768,25 @@ body {
   width: 100%;
   max-width: 300px;
 }
+
+/* Ensure 4 videos per row on desktop */
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 20px 0;
+  justify-items: center;
+}
+
+/* Style each video box */
+.work {
+  width: 100%;
+  max-width: 280px; /* Adjust this as needed */
+}
+
+.work video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
