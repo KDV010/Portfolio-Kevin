@@ -790,3 +790,40 @@ body {
   object-fit: cover;
   border-radius: 10px;
 }
+
+.about-section {
+  background: #ffffff0d; /* light transparent white, or use #fff for light themes */
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px); /* optional: frosted-glass effect */
+  -webkit-backdrop-filter: blur(8px);
+  margin-top: 40px;
+  transition: all 0.3s ease;
+}
+
+/* Optional: style for better text contrast inside the card */
+.about-section h1,
+.about-section p,
+.about-section ul,
+.about-section li,
+.about-section span {
+  color: #fff; /* or #222 if using a white background */
+}
+
+/* You can also make the tab buttons look more modern: */
+.tab-titles p {
+  background: #222;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 12px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.tab-titles p.active-link {
+  background: #4fc3f7;
+  color: #000;
+}
+
