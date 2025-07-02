@@ -768,6 +768,32 @@ body {
   width: 100%;
   max-width: 300px;
 }
+<<<<<<< HEAD
+=======
+
+/* Ensure 4 videos per row on desktop */
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 20px 0;
+  justify-items: center;
+}
+
+/* Style each video box */
+.work {
+  width: 100%;
+  max-width: 280px; /* Adjust this as needed */
+}
+
+.work video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+>>>>>>> f573d1c829a7bbf8be9362206988074fb258ae58
 .about-section {
   background: #ffffff0d; /* light transparent white, or use #fff for light themes */
   border-radius: 16px;
@@ -803,3 +829,7 @@ body {
   background: #4fc3f7;
   color: #000;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f573d1c829a7bbf8be9362206988074fb258ae58
