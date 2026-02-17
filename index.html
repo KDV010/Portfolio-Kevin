@@ -1,448 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <meta charset="=UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Personal Portfolio</title>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="style.css">
-      <script src="https://kit.fontawesome.com/74d5d45e0a.js" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kevin de Vera | Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/74d5d45e0a.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+
+<!-- ================= HEADER ================= -->
 <div id="header">
   <div class="container">
-    <!-- <nav class="header-static">
-      <img src="images/KEVIN LOGO.png" class="logo">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
-        <i class="fa-regular fa-circle-xmark"></i>
-      </ul>
-      <i class="fa-solid fa-bars"></i>
-    </nav> -->
     <div class="header-text">
       <p>Virtual Assistant | Video Editor | Graphic Artist</p>
       <h1>Hi there! I am <span>Kevin</span> de Vera<br>from the Philippines</h1>
     </div>
   </div>
-
-<!-- ------about------ -->
-
 </div>
+
+<!-- ================= ABOUT ================= -->
 <div id="about">
   <div class="container">
-    <div class="row">
-      
-<div class="about-section">
-  <h1 class="sub-title">About Me</h1>
-        <p>Kevin is a creative and organized professional with 5 years of management experience and over 9 years in graphic arts, interior design, CG art, and short-form video editing with simple motion. He also has 1 year of experience in medical-legal support and email-based customer support, giving him a strong blend of creative and administrative skills. He’s skilled in leading teams, managing projects, and keeping things on track. A reliable team player who communicates well and always looks for ways to learn and improve.
-        </p>
+    <div class="about-section">
+      <h1 class="sub-title">About Me</h1>
+      <p>
+        Kevin is a creative and organized professional with 5 years of management experience 
+        and over 9 years in graphic arts, interior design, CG art, and short-form video editing. 
+        He also has 1 year of experience in medical-legal support and email-based customer support,
+        combining creativity with strong administrative skills.
+      </p>
 
-        <div class="tab-wrapper">
-  <div class="tab-titles">
-    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-    <p class="tab-links" onclick="opentab('experience')">Experiences</p>
-    <p class="tab-links" onclick="opentab('education')">Education</p>
-  </div>
+      <div class="tab-wrapper">
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab(event,'skills')">Skills</p>
+          <p class="tab-links" onclick="opentab(event,'experience')">Experience</p>
+          <p class="tab-links" onclick="opentab(event,'education')">Education</p>
+        </div>
 
-  <div class="tab-contents active-tab" id="skills">
-    <ul>
-      <li><span>Social Media Marketing/Management</span><br>Content Creation/campaigns Using Hootsuite</li>  
-      <li><span>Customer Support</span><br>Email and chat</li>
-      <li><span>Video Editing</span><br>Infographics/Motion</li>
-      <li><span>Email Marketing</span><br>Constant Contact</li>
-      <li><span>Basic Web Development</span><br>HTML, CSS and JS, Wild Apricot, Wordpress and Squarespace</li>  
-      <li><span>3D Modelling</span><br>Architectural Concepts</li>
-      <li><span>Graphic Design</span><br>Marketing Materials/logo</li>
-    </ul>
-  </div>
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            <li><span>Social Media Marketing</span><br>Campaign creation & scheduling</li>
+            <li><span>Customer Support</span><br>Email & chat</li>
+            <li><span>Video Editing</span><br>Short & Long Form</li>
+            <li><span>Email Marketing</span><br>Constant Contact</li>
+            <li><span>Web Development</span><br>HTML, CSS, JS, WordPress</li>
+            <li><span>Graphic Design</span><br>Marketing materials & branding</li>
+          </ul>
+        </div>
 
-  <div class="tab-contents" id="experience">
-    <ul>
-      <li><span>2023-</span><br>Medical Assistant</li>  
-      <li><span>2023-</span><br>Business Virtual Assistant</li>   
-      <li><span>2023-</span><br>Short-Form Video Editor </li>   
-      <li><span>2017-2023</span><br>Manager of Technology/Marketing Lead</li>  
-      <li><span>2015-2017</span><br>Senior Designer/Supervisor</li>
-      <li><span>2014-2015</span><br>Junior Designer</li>
-      <li><span>2017-2018</span><br>ESL Tutor</li>   
-    </ul>
-  </div>
+        <div class="tab-contents" id="experience">
+          <ul>
+            <li><span>2023–Present</span><br>Medical Assistant / VA / Video Editor</li>
+            <li><span>2017–2023</span><br>Technology Manager / Marketing Lead</li>
+            <li><span>2015–2017</span><br>Senior Designer</li>
+          </ul>
+        </div>
 
-  <div class="tab-contents" id="education">
-    <ul>
-      <li><span>2011-2014</span><br>Bachelor Of Science in Business Administration Major in Entrepreneurship</li>
-      <li><span>2014-2015</span><br>Technical Drafting at Tesda Korphil Guiguinto Bulacan</li>
-    </ul>
-  </div>
-</div>
-
-
-      
+        <div class="tab-contents" id="education">
+          <ul>
+            <li><span>2011–2014</span><br>BSBA - Entrepreneurship</li>
+            <li><span>2014–2015</span><br>Technical Drafting (TESDA)</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- --------services--------- -->
-
-<!-- <div id="services">
-  <div class="container">
-    <h1 class="sub-title">My Services</h1>
-    <div class="services-list">
-      <div>
-        <i class="fa-solid fa-cube"></i>
-        <h2>Video Editing</h2>
-        <p>I am an experienced video editor mostly focused on creating reels, shorts, and any other shortform contents</p>
-        <a href="#">Learn more</a>
-      </div>
-      <div>
-        <i class="fa-solid fa-handshake-angle"></i>
-        <h2>Virtual Assistant </h2>
-        <p>As a virtual assistant, I can offer a range of services to help you manage your workload and increase your productivity. Here are some of the specific tasks and services that I can provide</p>
-        <a href="#">Learn more</a>
-      </div>
-      <div>
-        <i class="fa-solid fa-table"></i>
-        <h2>Digital Marketing Specialist</h2>
-        <p>A digital marketing job involves promoting products, services, or brands through online channels. Responsibilities include developing and implementing marketing strategies, managing digital advertising campaigns, analyzing data and metrics, optimizing online presence, and engaging with target audiences. </p>
-        <a href="#">Learn more</a>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-<!-- ----------my works---------- -->
+<!-- ================= PORTFOLIO ================= -->
 <div id="portfolio">
   <div class="container">
     <h1 class="sub-title">My Works</h1>
-    <h2 class="work-v">Video Editing | Podcasts/Motivational</h2>
-    
-    <div class="work-list">
-      <!-- Row 1 -->
-<!-- Row 1 -->
-<div class="work">
-  <video class="work-video" muted playsinline loop controls>
-    <source src="images/Timelines.mp4" type="video/mp4">
-  </video>
-</div>
-<div class="work">
-  <video class="work-video" muted playsinline loop controls>
-    <source src="images/twelve.mp4" type="video/mp4">
-  </video>
-</div>
-<div class="work">
-  <video class="work-video" muted playsinline loop controls>
-    <source src="images/Sex Sells.mp4" type="video/mp4">
-  </video>
-</div>
-<div class="work">
-  <video class="work-video" muted playsinline loop controls>
-    <source src="images/Materialize.mp4" type="video/mp4">
-  </video>
-</div>
 
-<!-- Row 2 -->
-<div class="work">
-  <video class="work-video" muted playsinline loop controls>
-    <source src="images/BELIEVE.mp4" type="video/mp4">
-  </video>
-</div>
-<div class="work">
-  <video class="work-video" muted playsinline loop controls>
-    <source src="images/Leave.mp4" type="video/mp4">
-  </video>
-</div>
-<div class="work">
-  <video class="work-video" muted playsinline loop controls>
-    <source src="images/Fullfill.mp4" type="video/mp4">
-  </video>
-</div>
-<div class="work">
-  <video class="work-video" muted playsinline loop controls>
-    <source src="images/It's about how hard you can get hit.mp4" type="video/mp4">
-  </video>
-</div>
-
-<!-- Row 3 -->
-<div class="work">
-  <video class="work-video" muted playsinline loop controls>
-    <source src="images/Casper.mp4" type="video/mp4">
-  </video>
-</div>
-<div class="work">
-  <video class="work-video" muted playsinline loop controls>
-    <source src="images/AdElle.mp4" type="video/mp4">
-  </video>
-</div>
-<div class="work">
-  <video class="work-video" muted playsinline loop controls>
-    <source src="images/Innerlink.mp4" type="video/mp4">
-  </video>
-</div>
-<div class="work">
-  <video class="work-video" muted playsinline loop controls>
-    <source src="images/BBAi.mp4" type="video/mp4">
-  </video>
-</div>
-
-<!-- Row 3 -->
-<div class="work">
-  <video class="work-video"  muted playsinline loop controls>
-    <source src="images/Fem2.mp4" type="video/mp4">
-  </video>
-</div>
-<div class="work">
-  <video class="work-video"  muted playsinline loop controls>
-    <source src="images/Fem3.mp4" type="video/mp4">
-  </video>
-</div>
-<div class="work">
-  <video class="work-video"  muted playsinline loop controls>
-    <source src="images/Things to do.mp4" type="video/mp4">
-  </video>
-</div>
-<div class="work">
-  <video class="work-video"  muted playsinline loop controls>
-    <source src="images/Reel tsoa2.mp4" type="video/mp4">
-  </video>
-</div>
-
-    
-  </div>
-</div>
-
-<!-- ----------Graphics/Thumbnails Section---------- -->
-<div id="graphics">
-  <div class="container">
-    <h1 class="sub-title">My Works</h1>
-    <h2 class="work-v">Graphics / Thumbnails /Brochures</h2>
+    <!-- ===== LONG FORM SECTION ===== -->
+    <h2 class="work-v">Long-Form Video Editing | Interviews | Podcasts</h2>
 
     <div class="work-list">
-      <!-- Graphic 1 -->
-      <div class="work">
-        <img src="images/SMM5.png" alt="Graphic Work 1" class="work-image" />
+      <div class="work long-work">
+        <video class="work-video" controls>
+          <source src="images/Longform1.mp4" type="video/mp4">
+        </video>
       </div>
 
-      <!-- Graphic 2 -->
+      <div class="work long-work">
+        <video class="work-video" controls>
+          <source src="images/Longform2.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <!-- ===== SHORT FORM SECTION ===== -->
+    <h2 class="work-v">Short-Form Editing | Reels | Motivational</h2>
+
+    <div class="work-list">
       <div class="work">
-        <img src="images/SMM6.png" alt="Graphic Work 2" class="work-image" />
+        <video class="work-video" muted loop controls>
+          <source src="images/Timelines.mp4" type="video/mp4">
+        </video>
       </div>
 
-      <!-- Graphic 3 -->
       <div class="work">
-        <img src="images/SMM7.png" alt="Graphic Work 3" class="work-image" />
+        <video class="work-video" muted loop controls>
+          <source src="images/twelve.mp4" type="video/mp4">
+        </video>
       </div>
 
-      <!-- Graphic 4 -->
       <div class="work">
-        <img src="images/Post.png" alt="Graphic Work 4" class="work-image" />
-      </div>
-      <!-- Graphic 1 -->
-      <div class="work">
-        <img src="images/HRT.png" alt="Graphic Work 1" class="work-image" />
+        <video class="work-video" muted loop controls>
+          <source src="images/Sex Sells.mp4" type="video/mp4">
+        </video>
       </div>
 
-      <!-- Graphic 2 -->
       <div class="work">
-        <img src="images/Uro.png" alt="Graphic Work 2" class="work-image" />
+        <video class="work-video" muted loop controls>
+          <source src="images/Materialize.mp4" type="video/mp4">
+        </video>
       </div>
-
-      <!-- Graphic 3 -->
-      <div class="work">
-        <img src="images/Lose.png" alt="Graphic Work 3" class="work-image" />
-      </div>
-
-      <!-- Graphic 4 -->
-      <div class="work">
-        <img src="images/Vasectomy.png" alt="Graphic Work 4" class="work-image" />
-      </div>
-       <!-- Graphic 4 -->
-      <div class="work">
-        <img src="images/thumb2.png" alt="Graphic Work 4" class="work-image" />
-      </div> <!-- Graphic 4 -->
-      <div class="work">
-        <img src="images/Thumb1.png" alt="Graphic Work 4" class="work-image" />
-      </div>
-      <!-- Graphic 4 -->
-      <div class="work">
-        <img src="images/Greenelle.png" alt="Graphic Work 4" class="work-image" />
-      </div>
-       <!-- Graphic 4 -->
-      <div class="work">
-        <img src="images/1080x1080 elle.jpg" alt="Graphic Work 4" class="work-image" />
-      </div> <!-- Graphic 4 -->
-    
-      
     </div>
   </div>
 </div>
 
-    
-  </div>
-
-  <!-- <div class="container-two hidden">
-    <div class="hide-me">
-      <div class="work">
-        <img src="images/Work-4.jpg">
-      </div>
-      <div class="work">
-        <img src="images/Work-5.jpg">
-      </div>
-      <div class="work">
-        <img src="images/Work-6.jpg">
-      </div>
-      <div class="work">
-        <img src="images/Work-7.jpg">
-      </div>
-      <div class="work">
-        <img src="images/Work-8.jpg">
-      </div>
-      <div class="work">
-        <img src="images/Work-9.jpg">
-      </div> -->
-
-    
-
-      <!-- <div class="work">
-        <img src="images/SMM.jpg">
-      </div>
-      <div class="work">
-        <img src="images/SMM2.png">
-      </div>
-      <div class="work">
-        <img src="images/SMM3.jpg">
-      </div>
-      <div class="work">
-        <img src="images/SMM4.jpg">
-      </div>
-      <div class="work">
-        <img src="images/SMM5.png">
-      </div>
-      <div class="work">
-        <img src="images/SMM6.png">
-      </div>
-      <div class="work">
-        <img src="images/SMM7.png">
-      </div>
-      <div class="work">
-        <img src="images/SMM4.jpg">
-      </div> -->
-
-    </div>
-    
-
-  <!-- </div>
-  <li href="#" onclick="showHideUsers(); changeButtonText();"  class="button" >See more</li> -->
-  
-  
-</div>
-
-
-<!-- -------------contact----------------------- -->
-
+<!-- ================= CONTACT ================= -->
 <div id="contact">
   <div class="container">
-    <div class="row">
-      <div class="contact-left">
-        <h1 class="sub-title">Contact Me</h1>
-        <p><i class="fa-solid fa-paper-plane"></i>kevindevera.ea@gmail.com</p>
-        <p><i class="fa-solid fa-paper-plane"></i>deverakevins@gmail.com</p>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/Goldified/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://twitter.com/KevinDvera" target="_blank"><i class="fa-brands fa-twitter"></i>
-            <a href="https://www.instagram.com/kevindevera.eva/ " target="_blank"><i class="fa-brands fa-instagram"></i></i>
-            <a href="https://www.linkedin.com/in/kevin-de-vera-432762248/" target="_blank"><i class="fa-brands fa-linkedin-in"></i>
-        </div>
-        <a href="images/MY CV.pdf" download class="btn btn2">Download CV</a>
+    <div class="contact-left">
+      <h1 class="sub-title">Contact Me</h1>
+      <p><i class="fa-solid fa-envelope"></i> kevindevera.ea@gmail.com</p>
+
+      <div class="social-icons">
+        <a href="https://www.facebook.com/Goldified/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://twitter.com/KevinDvera" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.instagram.com/kevindevera.eva/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/kevin-de-vera-432762248/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
       </div>
-      <div class="contact-right">
-        <form>
-          <input type="text" name="Name" placeholder="Your Name" required>
-          <input type="text" name="Email" placeholder="Your Email" required>
-          <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
-          <button type="submit" class="btn btn2">Submit</button>
-        </form>
-        
-      </div>
+
+      <a href="images/MY CV.pdf" download class="btn btn2">Download CV</a>
+    </div>
+
+    <div class="contact-right">
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="6" placeholder="Your Message"></textarea>
+        <button type="submit" class="btn btn2">Submit</button>
+      </form>
     </div>
   </div>
-
 </div>
 
-
-
-
-
+<!-- ================= SCRIPT ================= -->
 <script>
+function opentab(event, tabname){
+  let tablinks = document.getElementsByClassName("tab-links");
+  let tabcontents = document.getElementsByClassName("tab-contents");
 
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
+  for(let tablink of tablinks){
+    tablink.classList.remove("active-link");
+  }
 
-    function opentab(tabname){
-        for(tablink of tablinks){
-          tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-          tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab")
-    }
+  for(let tabcontent of tabcontents){
+    tabcontent.classList.remove("active-tab");
+  }
 
-
-    // var hideMe = document.querySelector(".hide-me");
-  
-    // function showHideUsers() {
-    //     hideMe.classList.toggle("hide")
-    // }
-
-    var btnLess = document.querySelectorAll(".button");
-
-    function changeButtonText() {
-        btnLess.forEach(function(btn) {
-        if (btn.textContent === "See more") {
-        btn.textContent = "See less";
-       } else {
-        btn.textContent = "See more";
-       }
-     });
+  event.currentTarget.classList.add("active-link");
+  document.getElementById(tabname).classList.add("active-tab");
 }
-
-    var myButton = document.querySelector(".button");
-    var myDiv = document.querySelector(".container-two");
-
-    function showHideUsers() {
-      myDiv.classList.toggle("show")
-    }
-
-
-
-  
-      
-    
-
-
-    
-    // if (elem.value=="See More") elem.value = "See More";
-    // else elem.value = "See Less";
-
-
-
-
-
-
-
-   
 </script>
+
 </body>
 </html>
-
-
-
