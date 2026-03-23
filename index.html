@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kevin de Vera — Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/74d5d45e0a.js" crossorigin="anonymous"></script>
+
+<style>
+/* ===== RESET & VARIABLES ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f7f5f2;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --muted: #888;
+  --accent: #c0392b;
+  --accent-light: #e8d5d3;
+  --border: #e5e2de;
+  --nav-h: 68px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===== NAV ===== */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  background: rgba(247,245,242,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6%;
+  z-index: 100;
+}
+
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-logo span {
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+/* ===== HERO ===== */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: calc(var(--nav-h) + 60px) 6% 80px;
+  position: relative;
+}
+
+.hero-inner {
+  max-width: 900px;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 28px;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.1s forwards;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.hero-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(58px, 9vw, 110px);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: -0.01em;
+  margin-bottom: 32px;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.25s forwards;
+}
+
+.hero-name strong {
+  font-style: italic;
+  font-weight: 400;
+  display: block;
+}
+
+.hero-name strong {
+  font-weight: 600;
+  display: block;
+}
+
+.hero-desc {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 440px;
+  line-height: 1.75;
+  margin-bottom: 44px;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.4s forwards;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.55s forwards;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: var(--text);
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn-primary:hover {
+  background: var(--accent);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.btn-outline:hover {
+  border-color: var(--text);
+  transform: translateY(-1px);
+}
+
+.hero-decor {
+  position: absolute;
+  right: 6%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 200px;
+  font-weight: 600;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--border);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0;
+  animation: fadeIn 1.2s 0.8s forwards;
+}
+
+/* ===== SECTION SHARED ===== */
+section {
+  padding: 100px 6%;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.section-label::before {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 60px;
+}
+
+/* ===== PORTFOLIO TABS ===== */
+.tab-bar {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 48px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tab-bar::-webkit-scrollbar { display: none; }
+
+.tab-btn {
+  padding: 12px 24px;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+}
+
+.tab-btn:hover { color: var(--text); }
+
+.tab-btn.active {
+  color: var(--text);
+  border-bottom-color: var(--text);
+}
+
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* ===== VIDEO GRID ===== */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.video-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.08);
+}
+
+.video-card video {
+  width: 100%;
+  display: block;
+  aspect-ratio: 9/16;
+  object-fit: cover;
+  background: #000;
+}
+
+/* ===== GRAPHICS ===== */
+#graphics {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.image-grid {
+  columns: 3;
+  column-gap: 16px;
+}
+
+.image-grid .img-card {
+  break-inside: avoid;
+  margin-bottom: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.image-grid .img-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.08);
+}
+
+.image-grid img {
+  width: 100%;
+  display: block;
+}
+
+/* ===== ABOUT STRIP ===== */
+#about {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  padding: 100px 6%;
+  background: var(--text);
+  color: #fff;
+}
+
+.about-text .section-label { color: #c0392b; }
+.about-text .section-label::before { background: #c0392b; }
+
+.about-text .section-title {
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.about-desc {
+  color: rgba(255,255,255,0.6);
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 480px;
+  margin-bottom: 36px;
+}
+
+.skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  padding: 6px 16px;
+  border: 1px solid rgba(255,255,255,0.15);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+}
+
+.about-stat-col {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.stat-item {
+  text-align: left;
+}
+
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
+  font-weight: 300;
+  line-height: 1;
+  color: #fff;
+}
+
+.stat-label {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-top: 6px;
+}
+
+/* ===== CONTACT ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contact-info p {
+  font-size: 15px;
+  color: var(--muted);
+  margin-bottom: 32px;
+  line-height: 1.8;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 12px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-detail:hover { color: var(--accent); }
+
+.contact-detail i {
+  width: 20px;
+  color: var(--accent);
+  font-size: 16px;
+}
+
+.socials {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 15px;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.social-link:hover {
+  background: var(--text);
+  color: #fff;
+  border-color: var(--text);
+}
+
+.contact-cta {
+  padding-top: 12px;
+}
+
+.contact-cta .section-title {
+  margin-bottom: 28px;
+}
+
+.contact-cta p {
+  font-size: 15px;
+  color: var(--muted);
+  margin-bottom: 36px;
+  line-height: 1.75;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .image-grid { columns: 2; }
+  #about { flex-direction: column; gap: 48px; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .hero-decor { display: none; }
+}
+
+@media (max-width: 600px) {
+  .image-grid { columns: 1; }
+  .nav-links { display: none; }
+  .hero-name { font-size: 52px; }
+  .video-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <a href="#hero" class="nav-logo">K<span>.</span>deVera</a>
+  <ul class="nav-links">
+    <li><a href="#portfolio">Work</a></li>
+    <li><a href="#graphics">Graphics</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Available for freelance work</div>
+    <h1 class="hero-name">
+      Kevin<br>
+      <strong>de Vera</strong>
+    </h1>
+    <p class="hero-desc">
+      Video editor, graphic artist, and virtual assistant based in the Philippines — crafting compelling content that tells your story.
+    </p>
+    <div class="hero-cta">
+      <a href="#portfolio" class="btn-primary">View My Work <i class="fa-solid fa-arrow-down"></i></a>
+      <a href="images/MY CV.pdf" download class="btn-outline">Download CV <i class="fa-solid fa-download"></i></a>
+    </div>
+  </div>
+  <div class="hero-decor">KV</div>
+</section>
+
+<!-- ===== PORTFOLIO ===== -->
+<section id="portfolio">
+  <div class="section-label">Selected Work</div>
+  <h2 class="section-title">Video Editing</h2>
+
+  <div class="tab-bar">
+    <button class="tab-btn active" data-tab="business">Business & Brands</button>
+    <button class="tab-btn" data-tab="value">Value</button>
+    <button class="tab-btn" data-tab="lifestyle">Lifestyle</button>
+  </div>
+
+  <!-- Tab: Business -->
+  <div class="tab-panel active" id="tab-business">
+    <div class="video-grid">
+      <div class="video-card"><video muted loop controls playsinline><source src="images/HighFunctioning.mp4"></video></div>
+      <div class="video-card"><video muted loop controls playsinline><source src="images/Woman Emp2.mp4"></video></div>
+      <div class="video-card"><video muted loop controls playsinline><source src="images/Timelines.mp4"></video></div>
+      <div class="video-card"><video muted loop controls playsinline><source src="images/twelve.mp4"></video></div>
+      <div class="video-card"><video muted loop controls playsinline><source src="images/Casper.mp4"></video></div>
+      <div class="video-card"><video muted loop controls playsinline><source src="images/AdElle.mp4"></video></div>
+      <div class="video-card"><video muted loop controls playsinline><source src="images/Innerlink.mp4"></video></div>
+      <div class="video-card"><video muted loop controls playsinline><source src="images/BBAi.mp4"></video></div>
+      <div class="video-card"><video muted loop controls playsinline><source src="images/Sex Sells.mp4"></video></div>
+      <div class="video-card"><video muted loop controls playsinline><source src="images/Materialize.mp4"></video></div>
+    </div>
+  </div>
+
+  <!-- Tab: Value -->
+  <div class="tab-panel" id="tab-value">
+    <div class="video-grid">
+      <div class="video-card"><video muted loop controls playsinline><source src="images/Lights2.mp4"></video></div>
+      <div class="video-card"><video muted loop controls playsinline><source src="images/0304.mp4"></video></div>
+      <div class="video-card"><video muted loop controls playsinline><source src="images/For Portfolio Struggling.mp4"></video></div>
+      <div class="video-card"><video muted loop controls playsinline><source src="images/For Portfolio Dreaming.mp4"></video></div>
+    </div>
+  </div>
+
+  <!-- Tab: Lifestyle -->
+  <div class="tab-panel" id="tab-lifestyle">
+    <div class="video-grid">
+      <div class="video-card"><video muted loop controls playsinline><source src="images/Fem2.mp4"></video></div>
+      <div class="video-card"><video muted loop controls playsinline><source src="images/Fem3.mp4"></video></div>
+      <div class="video-card"><video muted loop controls playsinline><source src="images/Things to do.mp4"></video></div>
+      <div class="video-card"><video muted loop controls playsinline><source src="images/Reel tsoa2.mp4"></video></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GRAPHICS ===== -->
+<section id="graphics">
+  <div class="section-label">Visuals</div>
+  <h2 class="section-title">Graphics & Thumbnails</h2>
+
+  <div class="image-grid">
+    <div class="img-card"><img src="images/SMM5.png" alt="Social Media Graphic"></div>
+    <div class="img-card"><img src="images/SMM6.png" alt="Social Media Graphic"></div>
+    <div class="img-card"><img src="images/SMM7.png" alt="Social Media Graphic"></div>
+    <div class="img-card"><img src="images/Post.png" alt="Post Design"></div>
+    <div class="img-card"><img src="images/HRT.png" alt="HRT Graphic"></div>
+    <div class="img-card"><img src="images/Uro.png" alt="Uro Graphic"></div>
+    <div class="img-card"><img src="images/Lose.png" alt="Lose Graphic"></div>
+    <div class="img-card"><img src="images/Vasectomy.png" alt="Vasectomy Graphic"></div>
+    <div class="img-card"><img src="images/thumb2.png" alt="Thumbnail"></div>
+    <div class="img-card"><img src="images/Thumb1.png" alt="Thumbnail"></div>
+    <div class="img-card"><img src="images/Greenelle.png" alt="Greenelle"></div>
+    <div class="img-card"><img src="images/1080x1080 elle.jpg" alt="Elle Graphic"></div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<div id="about">
+  <div class="about-text">
+    <div class="section-label">About Me</div>
+    <h2 class="section-title">The person<br>behind the work</h2>
+    <p class="about-desc">
+      I'm Kevin, a freelance video editor and graphic artist from the Philippines with a passion for creating content that moves people. I specialize in short-form videos, motivational reels, brand visuals, and social media graphics.
+    </p>
+    <div class="skills-row">
+      <span class="skill-tag">Premiere Pro</span>
+      <span class="skill-tag">Opus</span>
+      <span class="skill-tag">Canva</span>
+      <span class="skill-tag">CapCut</span>
+      <span class="skill-tag">Photoshop</span>
+      <span class="skill-tag">Virtual Assistant</span>
+    </div>
+  </div>
+  <div class="about-stat-col">
+    <div class="stat-item">
+      <div class="stat-num">100+</div>
+      <div class="stat-label">Projects Completed</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">3+</div>
+      <div class="stat-label">Years of Experience</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">∞</div>
+      <div class="stat-label">Dedication</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="section-label">Get in Touch</div>
+      <p>Feel free to reach out for collaborations, freelance projects, or just a quick hello.</p>
+
+      <a href="mailto:kevindevera.ea@gmail.com" class="contact-detail">
+        <i class="fa-solid fa-envelope"></i>
+        <span>kevindevera.ea@gmail.com</span>
+      </a>
+      <a href="mailto:deverakevins@gmail.com" class="contact-detail">
+        <i class="fa-solid fa-envelope"></i>
+        <span>deverakevins@gmail.com</span>
+      </a>
+
+      <div class="socials">
+        <a href="https://www.facebook.com/Goldified/" target="_blank" class="social-link" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com/KevinDvera" target="_blank" class="social-link" aria-label="Twitter">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/kevindevera.eva/" target="_blank" class="social-link" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/kevin-de-vera-432762248/" target="_blank" class="social-link" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-cta">
+      <h2 class="section-title">Let's work<br>together.</h2>
+      <p>Open to freelance video editing, graphic design, and virtual assistant opportunities.</p>
+      <a href="images/MY CV.pdf" download class="btn-primary">Download CV <i class="fa-solid fa-download"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <span>© 2025 Kevin de Vera</span>
+  <span>Video Editor · Graphic Artist · Virtual Assistant</span>
+</footer>
+
+<!-- ===== TABS SCRIPT ===== -->
+<script>
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    });
+  });
+</script>-e 
+</body>
+</html>
