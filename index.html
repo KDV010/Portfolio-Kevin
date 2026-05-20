@@ -7,7 +7,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/74d5d45e0a.js" crossorigin="anonymous"></script>
 
 <style>
@@ -137,24 +137,23 @@ nav {
 }
 
 .hero-name {
-  font-family: 'DM Serif Display', serif;
-  font-size: clamp(58px, 9vw, 110px);
-  font-weight: 400;
-  line-height: 0.92;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(72px, 11vw, 130px);
+  font-weight: 900;
+  line-height: 0.9;
   letter-spacing: -0.01em;
+  text-transform: uppercase;
   margin-bottom: 32px;
   opacity: 0;
   animation: fadeUp 0.8s 0.25s forwards;
+  background: linear-gradient(135deg, #8b0000 0%, #c0392b 35%, #e74c3c 65%, #ff6b6b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero-name strong {
-  font-style: italic;
-  font-weight: 400;
-  display: block;
-}
-
-.hero-name strong {
-  font-weight: 600;
+  font-weight: 900;
   display: block;
 }
 
@@ -219,9 +218,10 @@ nav {
   right: 6%;
   top: 50%;
   transform: translateY(-50%);
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: 200px;
-  font-weight: 600;
+  font-weight: 900;
+  text-transform: uppercase;
   color: transparent;
   -webkit-text-stroke: 1px var(--border);
   line-height: 1;
@@ -559,7 +559,7 @@ footer {
 @media (max-width: 600px) {
   .image-grid { columns: 1; }
   .nav-links { display: none; }
-  .hero-name { font-size: 52px; }
+  .hero-name { font-size: 64px; }
   .video-grid { grid-template-columns: 1fr; }
 }
 </style>
@@ -751,7 +751,7 @@ footer {
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
+<!-- ===== FOOTER ===== */
 <footer>
   <span>© 2025 Kevin de Vera</span>
   <span>Video Editor · Graphic Artist · Virtual Assistant</span>
@@ -767,6 +767,7 @@ footer {
       document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
     });
   });
-</script>-e 
+</script>
+
 </body>
 </html>
