@@ -7,7 +7,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/74d5d45e0a.js" crossorigin="anonymous"></script>
 
 <style>
@@ -59,7 +59,7 @@ nav {
 }
 
 .nav-logo {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 22px;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -257,9 +257,9 @@ section {
 }
 
 .section-title {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(38px, 5vw, 58px);
-  font-weight: 300;
+  font-weight: 700;
   line-height: 1.1;
   margin-bottom: 60px;
 }
@@ -310,23 +310,81 @@ section {
 }
 
 .video-card {
-  background: var(--surface);
+  background: #000;
   border: 1px solid var(--border);
   overflow: hidden;
   transition: transform 0.25s, box-shadow 0.25s;
+  position: relative;
+  aspect-ratio: 9/16;
+  cursor: pointer;
 }
 
 .video-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 48px rgba(0,0,0,0.08);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.18);
 }
 
 .video-card video {
   width: 100%;
+  height: 100%;
   display: block;
-  aspect-ratio: 9/16;
   object-fit: cover;
   background: #000;
+  position: absolute;
+  inset: 0;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.38);
+  transition: background 0.3s, opacity 0.3s;
+  z-index: 2;
+}
+
+.video-card.playing .video-overlay {
+  background: transparent;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.video-card:hover .video-overlay {
+  background: rgba(0,0,0,0.22);
+}
+
+.video-card.playing:hover .video-overlay {
+  background: transparent;
+  opacity: 0;
+}
+
+.play-btn {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 8px 32px rgba(192,57,43,0.5);
+  flex-shrink: 0;
+}
+
+.play-btn svg {
+  width: 28px;
+  height: 28px;
+  fill: #fff;
+  margin-left: 4px;
+}
+
+.video-card:hover .play-btn {
+  transform: scale(1.1);
+  background: #e74c3c;
+  box-shadow: 0 12px 40px rgba(192,57,43,0.65);
 }
 
 /* ===== GRAPHICS ===== */
@@ -435,9 +493,9 @@ section {
 }
 
 .stat-num {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 56px;
-  font-weight: 300;
+  font-weight: 900;
   line-height: 1;
   color: #fff;
 }
@@ -610,41 +668,41 @@ footer {
   <!-- Tab: Business -->
   <div class="tab-panel active" id="tab-business">
     <div class="video-grid">
-      <div class="video-card"><video muted loop controls playsinline><source src="images/ForPort.mp4"></video></div>
-      <div class="video-card"><video muted loop controls playsinline><source src="images/Frugal.mp4"></video></div>
-      <div class="video-card"><video muted loop controls playsinline><source src="images/NoBuy.mp4"></video></div>
-      <div class="video-card"><video muted loop controls playsinline><source src="images/Silent Expectations 3.mp4"></video></div>
-      <div class="video-card"><video muted loop controls playsinline><source src="images/HighFunctioning.mp4"></video></div>
-      <div class="video-card"><video muted loop controls playsinline><source src="images/Woman Emp2.mp4"></video></div>
-      <div class="video-card"><video muted loop controls playsinline><source src="images/Timelines.mp4"></video></div>
-      <div class="video-card"><video muted loop controls playsinline><source src="images/twelve.mp4"></video></div>
-      <div class="video-card"><video muted loop controls playsinline><source src="images/Casper.mp4"></video></div>
-      <div class="video-card"><video muted loop controls playsinline><source src="images/AdElle.mp4"></video></div>
-      <div class="video-card"><video muted loop controls playsinline><source src="images/Innerlink.mp4"></video></div>
-      <div class="video-card"><video muted loop controls playsinline><source src="images/OTBforPortfolio.mp4"></video></div>
-      <div class="video-card"><video muted loop controls playsinline><source src="images/BBAi.mp4"></video></div>
-      <div class="video-card"><video muted loop controls playsinline><source src="images/Sex Sells.mp4"></video></div>
-      <div class="video-card"><video muted loop controls playsinline><source src="images/VER.mp4"></video></div>
+      <div class="video-card"><video muted loop playsinline><source src="images/ForPort.mp4"></video><div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div></div>
+      <div class="video-card"><video muted loop playsinline><source src="images/Frugal.mp4"></video><div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div></div>
+      <div class="video-card"><video muted loop playsinline><source src="images/NoBuy.mp4"></video><div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div></div>
+      <div class="video-card"><video muted loop playsinline><source src="images/Silent Expectations 3.mp4"></video><div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div></div>
+      <div class="video-card"><video muted loop playsinline><source src="images/HighFunctioning.mp4"></video><div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div></div>
+      <div class="video-card"><video muted loop playsinline><source src="images/Woman Emp2.mp4"></video><div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div></div>
+      <div class="video-card"><video muted loop playsinline><source src="images/Timelines.mp4"></video><div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div></div>
+      <div class="video-card"><video muted loop playsinline><source src="images/twelve.mp4"></video><div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div></div>
+      <div class="video-card"><video muted loop playsinline><source src="images/Casper.mp4"></video><div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div></div>
+      <div class="video-card"><video muted loop playsinline><source src="images/AdElle.mp4"></video><div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div></div>
+      <div class="video-card"><video muted loop playsinline><source src="images/Innerlink.mp4"></video><div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div></div>
+      <div class="video-card"><video muted loop playsinline><source src="images/OTBforPortfolio.mp4"></video><div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div></div>
+      <div class="video-card"><video muted loop playsinline><source src="images/BBAi.mp4"></video><div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div></div>
+      <div class="video-card"><video muted loop playsinline><source src="images/Sex Sells.mp4"></video><div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div></div>
+      <div class="video-card"><video muted loop playsinline><source src="images/VER.mp4"></video><div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div></div>
     </div>
   </div>
 
   <!-- Tab: Value -->
   <div class="tab-panel" id="tab-value">
     <div class="video-grid">
-      <div class="video-card"><video muted loop controls playsinline><source src="images/Lights2.mp4"></video></div>
-      <div class="video-card"><video muted loop controls playsinline><source src="images/0304.mp4"></video></div>
-      <div class="video-card"><video muted loop controls playsinline><source src="images/For Portfolio Struggling.mp4"></video></div>
-      <div class="video-card"><video muted loop controls playsinline><source src="images/For Portfolio Dreaming.mp4"></video></div>
+      <div class="video-card"><video muted loop playsinline><source src="images/Lights2.mp4"></video><div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div></div>
+      <div class="video-card"><video muted loop playsinline><source src="images/0304.mp4"></video><div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div></div>
+      <div class="video-card"><video muted loop playsinline><source src="images/For Portfolio Struggling.mp4"></video><div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div></div>
+      <div class="video-card"><video muted loop playsinline><source src="images/For Portfolio Dreaming.mp4"></video><div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div></div>
     </div>
   </div>
 
   <!-- Tab: Lifestyle -->
   <div class="tab-panel" id="tab-lifestyle">
     <div class="video-grid">
-      <div class="video-card"><video muted loop controls playsinline><source src="images/Fem2.mp4"></video></div>
-      <div class="video-card"><video muted loop controls playsinline><source src="images/Fem3.mp4"></video></div>
-      <div class="video-card"><video muted loop controls playsinline><source src="images/Things to do.mp4"></video></div>
-      <div class="video-card"><video muted loop controls playsinline><source src="images/Reel tsoa2.mp4"></video></div>
+      <div class="video-card"><video muted loop playsinline><source src="images/Fem2.mp4"></video><div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div></div>
+      <div class="video-card"><video muted loop playsinline><source src="images/Fem3.mp4"></video><div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div></div>
+      <div class="video-card"><video muted loop playsinline><source src="images/Things to do.mp4"></video><div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div></div>
+      <div class="video-card"><video muted loop playsinline><source src="images/Reel tsoa2.mp4"></video><div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div></div>
     </div>
   </div>
 </section>
@@ -757,8 +815,9 @@ footer {
   <span>Video Editor · Graphic Artist · Virtual Assistant</span>
 </footer>
 
-<!-- ===== TABS SCRIPT ===== -->
+<!-- ===== TABS + VIDEO SCRIPT ===== -->
 <script>
+  // Tabs
   document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -767,6 +826,36 @@ footer {
       document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
     });
   });
+
+  // Custom play button
+  document.addEventListener('click', function(e) {
+    const card = e.target.closest('.video-card');
+    if (!card) return;
+    const video = card.querySelector('video');
+    if (!video) return;
+
+    if (video.paused) {
+      // Pause all other videos
+      document.querySelectorAll('.video-card video').forEach(v => {
+        if (v !== video) {
+          v.pause();
+          v.closest('.video-card').classList.remove('playing');
+        }
+      });
+      video.play();
+      card.classList.add('playing');
+    } else {
+      video.pause();
+      card.classList.remove('playing');
+    }
+  });
+
+  // When video ends, show overlay again
+  document.addEventListener('ended', function(e) {
+    if (e.target.tagName === 'VIDEO') {
+      e.target.closest('.video-card').classList.remove('playing');
+    }
+  }, true);
 </script>
 
 </body>
